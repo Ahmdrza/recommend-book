@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h4 Select Genre
+    form(action="/genre/random-book", method="get")
+            select#genre(name="genre")
+                each category in categories
+                    option(value=category.url)  #{category.category}
+            br
+            br
+            button(type="submit") Submit

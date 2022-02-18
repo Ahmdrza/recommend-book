@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h4 We think you will like "#{book}"
+    h5 please wait while we take you to checkout page
+
+    script setTimeout(() => { window.location.href = "/checkout?book=#{book}" }, 3000)
